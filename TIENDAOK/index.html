@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NM TIENDA OK | iPhone Exclusivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<div class="announcement-bar">
+        <p> Entrega inmediata |  Todas las formas de pago</p>
+    </div>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        
+        <div class="nav-actions">
+            <a href="https://wa.me/5492615093546?text=Hola,%20tengo%20una%20consulta%20sobre%20un%20iPhone." target="_blank" class="nav-wa-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>¿Tienes una consulta?</span>
+            </a>
+
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+  <header class="hero">
+        
+        <img src="img/logo.png" alt="NM Tienda OK" class="hero-logo">
+        
+        <div class="hero-content">
+            <h1>TIENDAOK</h1> <p>Tecnología premium al mejor precio.</p>
+            <button class="btn-hero" onclick="scrollToProducts()">Ver Catálogo</button>
+        </div>
+
+    </header>
+
+    <section class="features-bar">
+        
+        <a href="garantia.pdf" target="_blank" class="feature-item">
+            <span class="feature-icon">🛡️</span>
+            <div class="feature-text">
+                <h3>Garantía Escrita</h3>
+                <p>Ver Términos y Condiciones</p> </div>
+        </a>
+
+        <a href="https://maps.app.goo.gl/UAEqio4Xa9UbyEH39" target="_blank" class="feature-item">
+            <span class="feature-icon">📍</span>
+            <div class="feature-text">
+                <h3>Nuestra Oficina</h3>
+                <p>Ver en Google Maps</p>
+            </div>
+        </a>
+
+        <a href="pagos.jpeg" target="_blank" class="feature-item">
+            <span class="feature-icon">💳</span>
+            <div class="feature-text">
+                <h3>Formas de Pago</h3>
+                <p>Ver Medios de Pagos</p>
+            </div>
+        </a>
+
+    </section>
+
+    <section class="container" id="productos">
+         <h2>Modelos Disponibles</h2>
+        <div class="grid-products" id="product-list">
+            </div>
+    </section>
+        <section class="container" id="main-container">
+        </section>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Bolsa</h3>
+            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Tu bolsa está vacía.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                
+                <div class="footer-col">
+                    <img src="img/logo.png" alt="Santoni Store" class="footer-logo-img">
+                    <div class="footer-logo"></div> 
+                    <p>La mejor tecnología al alcance de tu mano. Calidad, garantía y confianza.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i> 
+                            <span>Av. España 1340 (Edificio Buci), Mendoza, Argentina</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i> 
+                            <span>261 509 3546</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i> 
+                            <span>nicolasmendez.nm23.nm@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/tienddaokk/" target="_blank" class="social-btn">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a> 
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2026 NM TIENDA OK (Nicolas Mendez) - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

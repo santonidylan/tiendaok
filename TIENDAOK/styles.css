@@ -1,0 +1,616 @@
+:root {
+    --bg-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --accent-color: #0071e3;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- BARRA DE ANUNCIOS (Top Bar) --- */
+.announcement-bar {
+    background-color: #1d1d1f;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* --- NAVBAR (Menú Superior) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.logo img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botón WhatsApp (Pastilla) */
+.nav-wa-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25d366;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.nav-wa-btn:hover {
+    background-color: #1ebc51;
+    transform: translateY(-2px);
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- BANNER HORIZONTAL (Estilo Panorámico) --- */
+.hero {
+    display: flex;
+    flex-direction: row; /* Elementos lado a lado (Izquierda - Derecha) */
+    align-items: center; /* Centrados verticalmente */
+    justify-content: center; /* Centrados horizontalmente en el bloque */
+    gap: 60px; /* Espacio generoso entre el logo y el texto */
+    
+    /* FORMA ALARGADA */
+    width: 100%;
+    height: 450px; /* Altura fija para efecto "tira" (ajusta a 400px si lo quieres más fino) */
+    padding: 0 40px;
+    
+    background: #000;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* El Logo a la Izquierda */
+/* --- LOGO EN BANNER (Estilo Fantasma + Panorámico) --- */
+.hero-logo {
+    /* 1. POSICIÓN Y TAMAÑO (Para el banner alargado) */
+    height: 85%;         /* Ocupa casi toda la altura del banner */
+    width: auto;
+    max-width: 50%;      /* No más de la mitad del ancho */
+    object-fit: contain;
+    margin-bottom: 0;    /* Al estar de lado, no necesita margen abajo */
+
+    /* 2. EFECTO FANTASMA (La magia) */
+    opacity: 0.4;        /* Transparencia clave para el efecto fantasma */
+    mix-blend-mode: screen; /* Fusiona el logo con el negro suavemente */
+    
+    /* 3. BRILLO Y DETALLES */
+    /* Sombra blanca difuminada para que "respire" */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    
+    /* 4. ANIMACIÓN DE ENTRADA */
+    animation: slideInGhost 1.5s ease-out;
+    transition: all 0.5s ease; /* Suavidad si le pasas el mouse */
+}
+
+/* Efecto opcional: Que se "encienda" al pasar el mouse */
+.hero-logo:hover {
+    opacity: 0.8;        /* Se vuelve más sólido */
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6)); /* Brilla más */
+    transform: scale(1.02); /* Crece un poquito */
+}
+
+/* Animación personalizada para el fantasma (entra suave desde la izquierda) */
+@keyframes slideInGhost {
+    from { opacity: 0; transform: translateX(-50px) scale(0.95); }
+    to { opacity: 0.4; transform: translateX(0) scale(1); }
+}
+
+/* --- AJUSTE PARA CELULARES --- */
+@media (max-width: 900px) {
+    .hero-logo {
+        height: auto;
+        max-height: 250px; /* Más chico en móvil */
+        max-width: 80%;
+        margin-bottom: 20px; /* Aquí sí necesita margen porque el texto va abajo */
+    }
+}
+
+/* El Contenido a la Derecha */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineado a la izquierda del bloque derecho */
+    text-align: left; /* Texto alineado a la izquierda */
+    max-width: 600px;
+    animation: slideInRight 1s ease-out;
+}
+
+/* Título Grande (Estilo "FOOTBALL PLAYER") */
+.hero-content h1 {
+    font-size: 3.5rem; /* Letra bien grande */
+    font-weight: 800; /* Letra gorda */
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Todo mayúsculas */
+    background: linear-gradient(to right, #fff, #999); /* Efecto degradado en texto (opcional) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #a1a1a6;
+    margin-bottom: 25px;
+}
+
+/* Animaciones de entrada */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- ADAPTACIÓN PARA CELULARES (Volver a Vertical) --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column; /* En celular, uno arriba del otro */
+        height: auto; /* Altura automática */
+        padding: 60px 20px;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .hero-logo {
+        height: auto;
+        max-height: 250px; /* Logo más chico en celular */
+        max-width: 80%;
+    }
+    
+    .hero-content {
+        align-items: center; /* Centrado en celular */
+        text-align: center;
+    }
+    
+    .hero-content h1 { font-size: 2.5rem; }
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #86868b;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn-hero {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-hero:hover { 
+    transform: scale(1.05); 
+    background: #005bb5;
+}
+
+/* --- CONTENEDOR --- */
+.container {
+    max-width: 1400px; /* Un poco más ancho para el carrusel */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 50px 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #1d1d1f;
+}
+
+/* --- PRODUCTOS (Carrusel Horizontal) --- */
+.grid-products {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 5px 40px 5px; /* Espacio abajo para scroll */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar personalizada */
+.grid-products::-webkit-scrollbar { height: 8px; }
+.grid-products::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.grid-products::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 10px; }
+.grid-products::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+.product-card {
+    min-width: 280px; /* Tarjetas un poco más anchas */
+    max-width: 280px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.product-details {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #515154;
+}
+
+.badge {
+    background: #f5f5f7;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 1.1rem;
+    color: #6e6e73;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-add:hover { background: #005bb5; }
+
+/* --- ETIQUETAS (Badges) --- */
+.badge-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    z-index: 10;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.badge-label.nuevo { background: #0071e3; }
+.badge-label.oferta { background: #ff3b30; }
+.badge-label.hot { background: #ff9500; }
+
+/* --- CARRITO (Sidebar) --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Oculto */
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    z-index: 2000; /* Siempre encima */
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open { right: 0; }
+
+.cart-header {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 { font-size: 1.5rem; font-weight: 600; }
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    animation: slideIn 0.4s ease forwards;
+    border: 1px solid #f5f5f7;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.cart-item-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #f9f9f9;
+}
+
+.cart-item-info { flex: 1; }
+.cart-item-info h4 { font-size: 1rem; font-weight: 600; color: #1d1d1f; }
+.cart-item-info p { font-size: 0.9rem; color: #86868b; }
+
+.btn-remove {
+    background: #ffe5e5;
+    color: #ff3b30;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-remove:hover { transform: rotate(90deg); background: #ff3b30; color: white; }
+
+.cart-footer {
+    padding: 25px;
+    background: #fbfbfd;
+    border-top: 1px solid #eee;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btn-checkout {
+    width: 100%;
+    background: #1d1d1f;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.btn-checkout:hover { background: #000; }
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1500;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.cart-overlay.open { display: block; opacity: 1; }
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding: 80px 0 30px;
+    margin-top: 100px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-col { flex: 1; min-width: 250px; }
+.footer-logo { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: #000; }
+.footer-col h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; color: #86868b; text-transform: uppercase; letter-spacing: 1px; }
+
+.footer-links { list-style: none; }
+.footer-links li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: #424245; }
+.social-links { display: flex; flex-direction: column; gap: 12px; }
+.social-btn { text-decoration: none; color: #424245; display: flex; align-items: center; gap: 10px; transition: color 0.3s; }
+.social-btn:hover { color: var(--accent-color); }
+
+.footer-copyright { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #e5e5e5; color: #86868b; font-size: 0.8rem; }
+
+/* --- LOGO EN EL FOOTER --- */
+.footer-logo-img {
+    height: 80px;       /* Un tamaño equilibrado para el pie de página */
+    width: 80px;        /* Mantiene la proporción */
+    object-fit: contain;
+    margin-bottom: 2px; /* Espacio antes del texto de abajo */
+    display: block;      /* Asegura que ocupe su propia línea */
+}
+
+/* --- MÓVILES --- */
+@media (max-width: 768px) {
+    .hero { min-height: 60vh; padding: 60px 20px; }
+    .hero-logo { width: 85%; margin-bottom: 30px; }
+    .hero p { font-size: 1.2rem; }
+    
+    .nav-wa-btn span { display: none; }
+    .nav-wa-btn { padding: 0; width: 40px; height: 40px; justify-content: center; border-radius: 50%; }
+    
+    .cart-sidebar { width: 100%; right: -100%; }
+    
+    .footer-row { flex-direction: column; text-align: center; }
+    .footer-links li, .social-btn { justify-content: center; }
+}
+
+/* --- BARRA DE CONFIANZA --- */
+.features-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Sombra suave abajo */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+    padding: 15px;      /* Un poco más de espacio para el clic */
+    
+    /* ESTILOS DE ENLACE */
+    text-decoration: none; /* Quita el subrayado feo */
+    color: inherit;        /* Mantiene el color negro/gris, no azul */
+    cursor: pointer;       /* Manito al pasar el mouse */
+    
+    border-radius: 12px;   /* Bordes redondeados */
+    transition: background 0.2s, transform 0.2s; /* Animación suave */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.feature-item:hover {
+    background: #f9f9f9;     /* Se oscurece un poquito */
+    transform: translateY(-3px); /* Se levanta levemente */
+}
+
+.feature-icon {
+    font-size: 2.5rem; /* Tamaño del emoji */
+}
+
+.feature-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #1d1d1f;
+}
+
+.feature-text p {
+    font-size: 0.9rem;
+    color: #86868b;
+}
+
+/* Ajuste para celulares: que se pongan uno abajo del otro */
+@media (max-width: 768px) {
+    .features-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
