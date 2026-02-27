@@ -9,6 +9,43 @@ const products = [
         badge: "Nuevo", 
         image: "img/iphone17.jpg" 
     },
+    // --- iPhone 16 Series ---
+    { 
+        id: 1, 
+        category: "iPhone 16 Series", 
+        name: "iPhone 16 Pro Max", 
+        details: "100% Batería | 256GB | Negro",
+        price: 1550000, 
+        badge: "Nuevo", 
+        image: "img/iphone16promax.webp" 
+    },
+    { 
+        id: 2, 
+        category: "iPhone 16 Series", 
+        name: "iPhone 16", 
+        details: "100% Batería | 128GB | Negro",
+        price: 1290000, 
+        badge: "Hot", 
+        image: "img/iphone16.jpg" 
+    },
+
+    // --- iPhone 15 Series ---
+    { 
+        id: 3, 
+        category: "iPhone 15 Series", 
+        name: "iPhone 15 Pro Max", 
+        details: "98% Batería | 256GB | Negro",
+        price: 1350000, 
+        image: "img/iphone15promax.webp" 
+    },
+    { 
+        id: 4, 
+        category: "iPhone 15 Series", 
+        name: "iPhone 15 Pro", 
+        details: "90% Batería | 128GB | Negro",
+        price: 1090000, 
+        image: "img/iphone15pro.jpg" 
+    },
 
     // --- iPhone 16 Series ---
     { 
@@ -119,6 +156,7 @@ const products = [
         image: "img/aurisp9dos.jpg"
     }
 ];
+
 
 
 let cart = [];
