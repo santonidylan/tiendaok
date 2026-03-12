@@ -8,7 +8,7 @@ const products = [
     { 
         id: 2, category: "iPhone 16 Series", name: "iPhone 16", 
         details: "100% Batería | 128GB | Negro", price: 1150000, badge: "Hot", 
-        image: "img/iphone16.webp" 
+        image: "img/iphone16.jpg" 
     },
 
     // --- iPhone 15 Series ---
@@ -20,26 +20,26 @@ const products = [
     { 
         id: 4, category: "iPhone 15 Series", name: "iPhone 15 Pro", 
         details: "100% Batería | 128GB | Gris", price: 1100000, badge: "Nuevo",
-        image: "img/iphone15pro.webp" 
+        image: "img/iphone15pro.jpg" 
     },
 
     // --- iPhone 14 Series ---
     { 
         id: 5, category: "iPhone 14 Series", name: "iPhone 14 Pro Max", 
         details: "100% Batería | 128GB", price: 1000000, 
-        image: "img/iphone14promax.webp" 
+        image: "img/iphone14promax.jpg" 
     },
     { 
         id: 6, category: "iPhone 14 Series", name: "iPhone 14 Pro", 
         details: "100% Batería | 128GB | Gris/Dorado", price: 860000, 
-        image: "img/iphone14pro.webp" 
+        image: "img/iphone14pro.jpg" 
     },
 
     // --- iPhone 13 Series ---
     { 
         id: 7, category: "iPhone 13 Series", name: "iPhone 13 Pro Max", 
         details: "87% Batería | 128GB", price: 830000, 
-        image: "img/iphone13promax.webp" 
+        image: "img/iphone13promax.jpg" 
     },
     { 
         id: 8, category: "iPhone 13 Series", name: "iPhone 13 Pro", 
@@ -49,24 +49,24 @@ const products = [
     { 
         id: 9, category: "iPhone 13 Series", name: "iPhone 13", 
         details: "100% Batería | 128GB", price: 635000, 
-        image: "img/iphone13.webp" 
+        image: "img/iphone13cel.jpg" 
     },
 
     // --- Otros Dispositivos ---
     { 
         id: 10, category: "Tablets", name: "Tablet Lenovo M10 FHD Plus", 
         details: "Nueva", price: 300000, 
-        image: "img/lenovom10.webp" 
+        image: "img/tablet lenovo.jpg" 
     },
     { 
         id: 11, category: "Consolas", name: "PS5 Digital", 
         details: "2 controles | 1 juego (FIFA 26)", price: 900000, 
-        image: "img/ps5usada.webp" 
+        image: "img/ps5.jpg" 
     },
     { 
         id: 12, category: "Consolas", name: "PS5 Digital Sellada", 
         details: "Nueva en caja cerrada", price: 900000, badge: "Nuevo",
-        image: "img/ps5sellada.webp" 
+        image: "img/ps5.jpg" 
     }, 
 
     { id: 12, 
@@ -76,7 +76,7 @@ const products = [
         price: 25000, 
         image: "img/aurisp9.png"
     },
-    
+
     { id: 13, 
         category: "Auriculares", 
         name: "Auriculares P9 Plus Max", 
