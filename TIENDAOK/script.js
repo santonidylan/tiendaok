@@ -44,12 +44,12 @@ const products = [
     { 
         id: 8, category: "iPhone 13 Series", name: "iPhone 13 Pro", 
         details: "100% Batería | 128GB | Celeste", price: 740000, 
-        image: "img/iphone13pro.webp" 
+        image: "img/iphone13cel.jpg" 
     },
     { 
         id: 9, category: "iPhone 13 Series", name: "iPhone 13", 
         details: "100% Batería | 128GB", price: 635000, 
-        image: "img/iphone13cel.jpg" 
+        image: "img/iphone13.jpg.jpg" 
     },
 
     // --- Otros Dispositivos ---
