@@ -1,87 +1,108 @@
 const products = [
-    // --- iPhone 16 Series ---
+    // --- iPhone 17 Series ---
     { 
-        id: 1, category: "iPhone 16 Series", name: "iPhone 16 Pro Max", 
-        details: "94% Batería | 256GB", price: 1520000, 
-        image: "img/iphone16promax.webp" 
+        id: 1, category: "iPhone 17 Series", name: "iPhone 17 Pro Max", 
+        details: "100% Batería | 256GB | Azul", price: 2130000, badge: "Nuevo",
+        image: "img/iphone17promax.jpg" 
     },
     { 
-        id: 2, category: "iPhone 16 Series", name: "iPhone 16", 
-        details: "100% Batería | 128GB | Negro", price: 1150000, badge: "Hot", 
-        image: "img/iphone16.jpg" 
+        id: 2, category: "iPhone 17 Series", name: "iPhone 17 Pro", 
+        details: "100% Batería | 256GB | Azul", price: 1960000, badge: "Nuevo",
+        image: "img/iphone17pro.jpg" 
+    },
+
+    // --- iPhone 16 Series ---
+    { 
+        id: 3, category: "iPhone 16 Series", name: "iPhone 16 Pro", 
+        details: "93% Batería | 128GB", price: 1200000, 
+        image: "img/iphone16pro.jpg" 
     },
 
     // --- iPhone 15 Series ---
     { 
-        id: 3, category: "iPhone 15 Series", name: "iPhone 15 Pro Max", 
-        details: "100% Batería | 256GB", price: 1250000, badge: "Nuevo",
+        id: 4, category: "iPhone 15 Series", name: "iPhone 15 Pro Max", 
+        details: "100% Batería | 256GB", price: 1200000, badge: "Hot",
         image: "img/iphone15promax.webp" 
     },
     { 
-        id: 4, category: "iPhone 15 Series", name: "iPhone 15 Pro", 
-        details: "100% Batería | 128GB | Gris", price: 1100000, badge: "Nuevo",
+        id: 5, category: "iPhone 15 Series", name: "iPhone 15 Pro Max", 
+        details: "86% Batería | 256GB", price: 1140000, 
+        image: "img/iphone15promax.webp" 
+    },
+    { 
+        id: 6, category: "iPhone 15 Series", name: "iPhone 15 Pro", 
+        details: "100% Batería | 128GB", price: 970000, badge: "Hot",
         image: "img/iphone15pro.jpg" 
     },
 
     // --- iPhone 14 Series ---
     { 
-        id: 5, category: "iPhone 14 Series", name: "iPhone 14 Pro Max", 
-        details: "100% Batería | 128GB", price: 1000000, 
+        id: 7, category: "iPhone 14 Series", name: "iPhone 14 Pro Max", 
+        details: "100% Batería | 128GB", price: 930000, badge: "Hot",
         image: "img/iphone14promax.jpg" 
     },
     { 
-        id: 6, category: "iPhone 14 Series", name: "iPhone 14 Pro", 
-        details: "100% Batería | 128GB | Gris/Dorado", price: 860000, 
+        id: 8, category: "iPhone 14 Series", name: "iPhone 14 Pro", 
+        details: "100% Batería | 128GB", price: 820000, badge: "Hot",
         image: "img/iphone14pro.jpg" 
+    },
+    { 
+        id: 9, category: "iPhone 14 Series", name: "iPhone 14", 
+        details: "84% Batería | 128GB", price: 580000, 
+        image: "img/iphone14.jpg" 
     },
 
     // --- iPhone 13 Series ---
     { 
-        id: 7, category: "iPhone 13 Series", name: "iPhone 13 Pro Max", 
-        details: "87% Batería | 128GB", price: 830000, 
+        id: 10, category: "iPhone 13 Series", name: "iPhone 13 Pro Max", 
+        details: "89% Batería | 128GB", price: 780000, 
         image: "img/iphone13promax.jpg" 
     },
     { 
-        id: 8, category: "iPhone 13 Series", name: "iPhone 13 Pro", 
-        details: "100% Batería | 128GB | Celeste", price: 740000, 
+        id: 11, category: "iPhone 13 Series", name: "iPhone 13 Pro", 
+        details: "100% Batería | 128GB", price: 730000, badge: "Hot",
+        image: "img/iphone13pro.jpg" 
+    },
+    { 
+        id: 12, category: "iPhone 13 Series", name: "iPhone 13 Pro", 
+        details: "87% Batería | 128GB", price: 670000, 
+        image: "img/iphone13pro.jpg" 
+    },
+    { 
+        id: 13, category: "iPhone 13 Series", name: "iPhone 13", 
+        details: "100% Batería | 128GB | Celeste", price: 600000, badge: "Hot",
         image: "img/iphone13cel.jpg" 
     },
     { 
-        id: 9, category: "iPhone 13 Series", name: "iPhone 13", 
-        details: "100% Batería | 128GB", price: 635000, 
-        image: "img/iphone13.jpg.jpg" 
+        id: 14, category: "iPhone 13 Series", name: "iPhone 13", 
+        details: "88% Batería | 128GB | Rosa", price: 560000, 
+        image: "img/iphone13rosa.jpg" 
     },
 
-    // --- Otros Dispositivos ---
+    // --- Otros Dispositivos (Borrar si ya no hay stock) ---
     { 
-        id: 10, category: "Tablets", name: "Tablet Lenovo M10 FHD Plus", 
+        id: 15, category: "Tablets", name: "Tablet Lenovo M10 FHD Plus", 
         details: "Nueva", price: 300000, 
         image: "img/tablet lenovo.jpg" 
     },
     { 
-        id: 11, category: "Consolas", name: "PS5 Digital", 
+        id: 16, category: "Consolas", name: "PS5 Digital", 
         details: "2 controles | 1 juego (FIFA 26)", price: 900000, 
         image: "img/ps5.jpg" 
     },
     { 
-        id: 12, category: "Consolas", name: "PS5 Digital Sellada", 
+        id: 17, category: "Consolas", name: "PS5 Digital Sellada", 
         details: "Nueva en caja cerrada", price: 900000, badge: "Nuevo",
         image: "img/ps5.jpg" 
     }, 
-
-    { id: 12, 
-        category: "Auriculares", 
-        name: "Auriculares P9 Plus Max", 
-        details: "Inalámbricos Bluetooth | Color Blanco", 
-        price: 25000, 
+    { 
+        id: 18, category: "Auriculares", name: "Auriculares P9 Plus Max", 
+        details: "Inalámbricos Bluetooth | Color Blanco", price: 25000, 
         image: "img/aurisp9.png"
     },
-
-    { id: 13, 
-        category: "Auriculares", 
-        name: "Auriculares P9 Plus Max", 
-        details: "Inalámbricos Bluetooth | Color Negro", 
-        price: 25000, 
+    { 
+        id: 19, category: "Auriculares", name: "Auriculares P9 Plus Max", 
+        details: "Inalámbricos Bluetooth | Color Negro", price: 25000, 
         image: "img/aurisp9dos.jpg"
     }
 ];
