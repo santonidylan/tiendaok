@@ -54,9 +54,11 @@ const products = [
         image: "img/iphone13pro.jpg" 
     },
     { 
+    
         id: 10, category: "iPhone 13 Series", name: "iPhone 13", 
         details: "100% Batería | 128GB", price: 600000, badge: "Hot",
-        image: "img/iphone13.jpg" 
+        image: "img/iphone13.jpg.jpg" 
+
     },
 
     // --- Otros Dispositivos (Borrar si no hay stock) ---
